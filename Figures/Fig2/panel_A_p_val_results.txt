@@ -1,0 +1,86 @@
+Run using R v3.5.1 on Crick HPC cluster - output results:
+
+[1] "Highest Expressed Transcript Results"
+                         
+                          fs_indel_expressed fs_indel_not_expressed
+  first                                   29                    101
+  intronless                              16                    159
+  last                                   427                    990
+  middle                                1030                   4955
+  penultimate_50bp_plus                   65                    202
+  penultimate_within_50bp                144                    310
+
+"P-value first exon group"
+
+	Fisher's Exact Test for Count Data
+
+data:  
+p-value = 0.5826
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.7176988 1.7282337
+sample estimates:
+odds ratio 
+  1.129406 
+
+
+"P-value last exon group"
+
+
+	Fisher's Exact Test for Count Data
+
+data:  
+p-value < 2.2e-16
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 1.687133 2.191284
+sample estimates:
+odds ratio 
+  1.923648 
+
+
+"P-value middle exon group"
+
+	Fisher's Exact Test for Count Data
+
+data:  
+p-value < 2.2e-16
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.4806429 0.6020838
+sample estimates:
+odds ratio 
+ 0.5378669 
+
+
+"P-value penultimate_50bp_plus exon group"
+
+	Fisher's Exact Test for Count Data
+
+data:  
+p-value = 0.1041
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.9427492 1.7017921
+sample estimates:
+odds ratio 
+    1.2736 
+
+"P-value penultimate_within_50bp exon group"
+
+	Fisher's Exact Test for Count Data
+
+data:  
+p-value = 4.39e-09
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 1.535502 2.340354
+sample estimates:
+odds ratio 
+  1.899206 
+
+
+
+
+
+
