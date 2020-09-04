@@ -14,5 +14,10 @@ library(ggbeeswarm)
 
 rm(list=ls(all=TRUE))
 
+dat<-read.table("./neoORF_lens_all.txt",header=T)
+cbPalette <- c("darkred","darkblue")
+my_comparisons <- list( c("No","Yes"))
+ggplot(data=dat,aes(x=reactive, y=neoORF,color=reactive))+geom_boxplot()+ geom_quasirandom(size = 3, shape=18)+ theme(legend.position = "none",text = element_text(size=10),axis.text.x = element_text(size=10),axis.text.y = element_text(size=10))+stat_compare_means(comparisons = my_comparisons)+scale_fill_manual(values=cbPalette)+scale_color_manual(values = cbPalette)+ theme(plot.margin = unit(c(1,1,1,1), "lines"))+xlab("T Cell Reactive neoORF Peptide")+scale_y_log10()
+
 dat<-read.table("./HLA_diversity_Summary.txt",header=T,sep="\t")
 ggplot(dat, aes(x=factor(Unique_HLAs_Bount),y=Proportion,fill=Type,colour=Type)) +geom_bar(stat="identity",position="dodge")+ylab("Proportion of Mutations") + xlab("Number Unique HLA Alleles Bound Per Mutation")+theme(text = element_text(size=15),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15))+scale_y_continuous(limits=c(0,0.6))+geom_errorbar(aes(ymin=lower, ymax=upper), width=.2,position=position_dodge(.9),color="black")
