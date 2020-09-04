@@ -1,0 +1,13 @@
+Type	Unique_HLAs_Bount	Proportion	lower	upper
+Fs-Indel	1	0.336	0.300	0.370
+Fs-Indel	2	0.327	0.290	0.360
+Fs-Indel	3	0.204	0.170	0.240
+Fs-Indel	4	0.093	0.070	0.120
+Fs-Indel	5	0.031	0.020	0.050
+Fs-Indel	6	0.009	0.000	0.020
+nsSNV	1	0.537	0.530	0.543
+nsSNV	2	0.324	0.317	0.329
+nsSNV	3	0.108	0.104	0.112
+nsSNV	4	0.027	0.025	0.029
+nsSNV	5	0.004	0.003	0.005
+nsSNV	6	0.000	0.000	0.0002
