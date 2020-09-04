@@ -1,0 +1,18 @@
+library(ggpubr)
+library(ggplot2)
+library(cowplot)
+library(nlme)
+library(plyr)
+require(reshape2)
+library(gridExtra)
+library(cowplot)
+library(survival)
+library('survminer')
+library(scales)
+library('dplyr')
+library(ggbeeswarm)
+
+rm(list=ls(all=TRUE))
+
+dat<-read.table("./HLA_diversity_Summary.txt",header=T,sep="\t")
+ggplot(dat, aes(x=factor(Unique_HLAs_Bount),y=Proportion,fill=Type,colour=Type)) +geom_bar(stat="identity",position="dodge")+ylab("Proportion of Mutations") + xlab("Number Unique HLA Alleles Bound Per Mutation")+theme(text = element_text(size=15),axis.text.x = element_text(size=15),axis.text.y = element_text(size=15))+scale_y_continuous(limits=c(0,0.6))+geom_errorbar(aes(ymin=lower, ymax=upper), width=.2,position=position_dodge(.9),color="black")
